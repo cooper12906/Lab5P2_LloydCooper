@@ -1,6 +1,6 @@
 package Lab5P2_LloydCooper;
 
-public abstract class Persona {
+public abstract class Persona extends SecretWarsGUI {
     protected String nombre;
     protected String poder;
     protected String debilidad;

@@ -1,5 +1,7 @@
 package Lab5P2_LloydCooper;
 
+import java.awt.Color;
+
 public class SecretWarsGUI extends javax.swing.JFrame {
 
     /**
@@ -20,13 +22,7 @@ public class SecretWarsGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        btnEscuadron = new javax.swing.JPanel();
-        txtEscuadron = new javax.swing.JLabel();
-        btnHeroe = new javax.swing.JPanel();
-        txtHeroe = new javax.swing.JLabel();
-        btnVillano = new javax.swing.JPanel();
-        txtVillano = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JPanel();
         txtAgregar = new javax.swing.JLabel();
@@ -36,16 +32,210 @@ public class SecretWarsGUI extends javax.swing.JFrame {
         txtModificar = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JPanel();
         txtEliminar = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        txtNombreHeroe = new javax.swing.JLabel();
+        tfNombreHeroe = new javax.swing.JTextField();
+        txtDebilidad = new javax.swing.JLabel();
+        tfDebilidadHeroe = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        ftfAgilidad = new javax.swing.JFormattedTextField();
+        jPanel1 = new javax.swing.JPanel();
+        btnEscuadron = new javax.swing.JPanel();
+        txtEscuadron = new javax.swing.JLabel();
+        btnHeroe = new javax.swing.JPanel();
+        txtHeroe = new javax.swing.JLabel();
+        btnVillano = new javax.swing.JPanel();
+        txtVillano = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnAgregar.setBackground(new java.awt.Color(255, 255, 255));
+        btnAgregar.setPreferredSize(new java.awt.Dimension(101, 20));
+
+        txtAgregar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtAgregar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtAgregar.setText("Agregar");
+
+        javax.swing.GroupLayout btnAgregarLayout = new javax.swing.GroupLayout(btnAgregar);
+        btnAgregar.setLayout(btnAgregarLayout);
+        btnAgregarLayout.setHorizontalGroup(
+            btnAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+        );
+        btnAgregarLayout.setVerticalGroup(
+            btnAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        );
+
+        btnListar.setBackground(new java.awt.Color(255, 255, 255));
+        btnListar.setPreferredSize(new java.awt.Dimension(101, 2));
+
+        txtListar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtListar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtListar.setText("Listar");
+
+        javax.swing.GroupLayout btnListarLayout = new javax.swing.GroupLayout(btnListar);
+        btnListar.setLayout(btnListarLayout);
+        btnListarLayout.setHorizontalGroup(
+            btnListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtListar, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+        );
+        btnListarLayout.setVerticalGroup(
+            btnListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtListar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        btnModificar.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificar.setPreferredSize(new java.awt.Dimension(100, 2));
+
+        txtModificar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtModificar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtModificar.setText("Modificar");
+
+        javax.swing.GroupLayout btnModificarLayout = new javax.swing.GroupLayout(btnModificar);
+        btnModificar.setLayout(btnModificarLayout);
+        btnModificarLayout.setHorizontalGroup(
+            btnModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtModificar, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        btnModificarLayout.setVerticalGroup(
+            btnModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
+
+        txtEliminar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtEliminar.setText("Eliminar");
+
+        javax.swing.GroupLayout btnEliminarLayout = new javax.swing.GroupLayout(btnEliminar);
+        btnEliminar.setLayout(btnEliminarLayout);
+        btnEliminarLayout.setHorizontalGroup(
+            btnEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+        );
+        btnEliminarLayout.setVerticalGroup(
+            btnEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 176, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(btnListar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(btnModificar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(76, 76, 76))
+        );
+
+        txtNombreHeroe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtNombreHeroe.setText("Nombre del heroe");
+
+        txtDebilidad.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDebilidad.setText("Debilidad");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setText("Agilidad fisica");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setText("Poder");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setText("Fuerza");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setText("Agilidad mental");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtDebilidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtNombreHeroe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tfNombreHeroe)
+                            .addComponent(tfDebilidadHeroe)
+                            .addComponent(ftfAgilidad, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(322, Short.MAX_VALUE))
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNombreHeroe)
+                    .addComponent(tfNombreHeroe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDebilidad)
+                    .addComponent(tfDebilidadHeroe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(ftfAgilidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addGap(0, 116, Short.MAX_VALUE))
+        );
+
+        background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 600, 370));
+
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         btnEscuadron.setBackground(new java.awt.Color(255, 255, 255));
+        btnEscuadron.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEscuadronMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEscuadronMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEscuadronMouseExited(evt);
+            }
+        });
 
         txtEscuadron.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtEscuadron.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -63,6 +253,17 @@ public class SecretWarsGUI extends javax.swing.JFrame {
         );
 
         btnHeroe.setBackground(new java.awt.Color(255, 255, 255));
+        btnHeroe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnHeroeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHeroeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHeroeMouseExited(evt);
+            }
+        });
 
         txtHeroe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtHeroe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -120,116 +321,6 @@ public class SecretWarsGUI extends javax.swing.JFrame {
 
         background.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 30));
 
-        btnAgregar.setBackground(new java.awt.Color(255, 255, 255));
-
-        txtAgregar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtAgregar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtAgregar.setText("Agregar");
-
-        javax.swing.GroupLayout btnAgregarLayout = new javax.swing.GroupLayout(btnAgregar);
-        btnAgregar.setLayout(btnAgregarLayout);
-        btnAgregarLayout.setHorizontalGroup(
-            btnAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-        );
-        btnAgregarLayout.setVerticalGroup(
-            btnAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        btnListar.setBackground(new java.awt.Color(255, 255, 255));
-        btnListar.setPreferredSize(new java.awt.Dimension(100, 2));
-
-        txtListar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtListar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtListar.setText("Listar");
-
-        javax.swing.GroupLayout btnListarLayout = new javax.swing.GroupLayout(btnListar);
-        btnListar.setLayout(btnListarLayout);
-        btnListarLayout.setHorizontalGroup(
-            btnListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtListar, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-        );
-        btnListarLayout.setVerticalGroup(
-            btnListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtListar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-        );
-
-        btnModificar.setBackground(new java.awt.Color(255, 255, 255));
-        btnModificar.setPreferredSize(new java.awt.Dimension(100, 2));
-
-        txtModificar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtModificar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtModificar.setText("Modificar");
-
-        javax.swing.GroupLayout btnModificarLayout = new javax.swing.GroupLayout(btnModificar);
-        btnModificar.setLayout(btnModificarLayout);
-        btnModificarLayout.setHorizontalGroup(
-            btnModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtModificar, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-        );
-        btnModificarLayout.setVerticalGroup(
-            btnModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
-
-        txtEliminar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtEliminar.setText("Eliminar");
-
-        javax.swing.GroupLayout btnEliminarLayout = new javax.swing.GroupLayout(btnEliminar);
-        btnEliminar.setLayout(btnEliminarLayout);
-        btnEliminarLayout.setHorizontalGroup(
-            btnEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-        );
-        btnEliminarLayout.setVerticalGroup(
-            btnEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 177, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnListar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(btnModificar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(76, 76, 76))
-        );
-
-        background.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 600, 30));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-
-        background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 600, 340));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -243,6 +334,34 @@ public class SecretWarsGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEscuadronMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEscuadronMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEscuadronMouseClicked
+
+    private void btnEscuadronMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEscuadronMouseEntered
+        btnEscuadron.setBackground(Color.darkGray);
+        btnEscuadron.setForeground(Color.white);
+    }//GEN-LAST:event_btnEscuadronMouseEntered
+
+    private void btnEscuadronMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEscuadronMouseExited
+        btnEscuadron.setBackground(Color.white);
+        btnEscuadron.setForeground(Color.black);
+    }//GEN-LAST:event_btnEscuadronMouseExited
+
+    private void btnHeroeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHeroeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHeroeMouseClicked
+
+    private void btnHeroeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHeroeMouseEntered
+        btnHeroe.setBackground(Color.darkGray);
+        btnHeroe.setForeground(Color.white);
+    }//GEN-LAST:event_btnHeroeMouseEntered
+
+    private void btnHeroeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHeroeMouseExited
+        btnHeroe.setBackground(Color.white);
+        btnHeroe.setForeground(Color.black);
+    }//GEN-LAST:event_btnHeroeMouseExited
 
     /**
      * @param args the command line arguments
@@ -288,15 +407,24 @@ public class SecretWarsGUI extends javax.swing.JFrame {
     private javax.swing.JPanel btnListar;
     private javax.swing.JPanel btnModificar;
     private javax.swing.JPanel btnVillano;
+    private javax.swing.JFormattedTextField ftfAgilidad;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JTextField tfDebilidadHeroe;
+    private javax.swing.JTextField tfNombreHeroe;
     private javax.swing.JLabel txtAgregar;
+    private javax.swing.JLabel txtDebilidad;
     private javax.swing.JLabel txtEliminar;
     private javax.swing.JLabel txtEscuadron;
     private javax.swing.JLabel txtHeroe;
     private javax.swing.JLabel txtListar;
     private javax.swing.JLabel txtModificar;
+    private javax.swing.JLabel txtNombreHeroe;
     private javax.swing.JLabel txtVillano;
     // End of variables declaration//GEN-END:variables
 }
