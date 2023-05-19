@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Lab5P2_LloydCooper;
 
-/**
- *
- * @author CUSTOMER PC
- */
 public class Persona {
+    protected String nombre;
+    protected String poder;
+    protected String debilidad;
+    protected int fuerza;
+    protected int agilidadFisica;
+    protected int agilidadMental;
+    
     
 }
