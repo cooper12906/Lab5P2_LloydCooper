@@ -1,19 +1,19 @@
 package Lab5P2_LloydCooper;
 
-public class SuperHumano extends Persona {
-    private String superHumano;
+public class Alien extends Extraterrestre {
+    private String planetaProcedencia;
 
-    public SuperHumano(String nombre, String poder, String debilidad, int fuerza, int agilidadFisica, int agilidadMental,String superHumano) {
+    public Alien(String planetaProcedencia, String nombre, String poder, String debilidad, int fuerza, int agilidadFisica, int agilidadMental) {
         super(nombre, poder, debilidad, fuerza, agilidadFisica, agilidadMental);
-        this.superHumano = superHumano;
+        this.planetaProcedencia = planetaProcedencia;
     }
 
-    public String getSuperHumano() {
-        return superHumano;
+    public String getPlanetaProcedencia() {
+        return planetaProcedencia;
     }
 
-    public void setSuperHumano(String superHumano) {
-        this.superHumano = superHumano;
+    public void setPlanetaProcedencia(String planetaProcedencia) {
+        this.planetaProcedencia = planetaProcedencia;
     }
 
     public String getNombre() {
@@ -63,8 +63,7 @@ public class SuperHumano extends Persona {
     public void setAgilidadMental(int agilidadMental) {
         this.agilidadMental = agilidadMental;
     }
-    
-    
+
     
     
 }

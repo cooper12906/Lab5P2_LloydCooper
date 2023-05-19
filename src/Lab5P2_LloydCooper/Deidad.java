@@ -1,19 +1,29 @@
 package Lab5P2_LloydCooper;
 
-public class SuperHumano extends Persona {
-    private String superHumano;
+public class Deidad extends Extraterrestre {
+    private boolean tieneCreyentes;
+    private String religion;
 
-    public SuperHumano(String nombre, String poder, String debilidad, int fuerza, int agilidadFisica, int agilidadMental,String superHumano) {
+    public Deidad(boolean tieneCreyentes, String religion, String nombre, String poder, String debilidad, int fuerza, int agilidadFisica, int agilidadMental) {
         super(nombre, poder, debilidad, fuerza, agilidadFisica, agilidadMental);
-        this.superHumano = superHumano;
+        this.tieneCreyentes = tieneCreyentes;
+        this.religion = religion;
     }
 
-    public String getSuperHumano() {
-        return superHumano;
+    public boolean isTieneCreyentes() {
+        return tieneCreyentes;
     }
 
-    public void setSuperHumano(String superHumano) {
-        this.superHumano = superHumano;
+    public void setTieneCreyentes(boolean tieneCreyentes) {
+        this.tieneCreyentes = tieneCreyentes;
+    }
+
+    public String getReligion() {
+        return religion;
+    }
+
+    public void setReligion(String religion) {
+        this.religion = religion;
     }
 
     public String getNombre() {
@@ -63,8 +73,6 @@ public class SuperHumano extends Persona {
     public void setAgilidadMental(int agilidadMental) {
         this.agilidadMental = agilidadMental;
     }
-    
-    
     
     
 }
