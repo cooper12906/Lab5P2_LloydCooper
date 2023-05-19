@@ -10,7 +10,8 @@ public class SecretWarsGUI extends javax.swing.JFrame {
     public SecretWarsGUI() {
         initComponents();
         setLocationRelativeTo(null);
-        panelAgregar.setVisible(false);
+        
+        
         panelListar.setVisible(false);
         panelModificar.setVisible(false);
         //panelEliminar.setVisible(false);
@@ -35,15 +36,6 @@ public class SecretWarsGUI extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         tfNombreEscuadron = new javax.swing.JTextField();
         tfLugarProcedencia = new javax.swing.JTextField();
-        panelBotones = new javax.swing.JPanel();
-        btnAgregar = new javax.swing.JPanel();
-        txtAgregar = new javax.swing.JLabel();
-        btnListar = new javax.swing.JPanel();
-        txtListar = new javax.swing.JLabel();
-        btnModificar = new javax.swing.JPanel();
-        txtModificar = new javax.swing.JLabel();
-        btnEliminar = new javax.swing.JPanel();
-        txtEliminar = new javax.swing.JLabel();
         panelAgregar = new javax.swing.JPanel();
         txtNombreHeroe = new javax.swing.JLabel();
         tfNombreHeroe = new javax.swing.JTextField();
@@ -60,13 +52,8 @@ public class SecretWarsGUI extends javax.swing.JFrame {
         panelListar = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         taListar = new javax.swing.JTextArea();
-        jPanel1 = new javax.swing.JPanel();
-        btnEscuadron = new javax.swing.JPanel();
-        txtEscuadron = new javax.swing.JLabel();
-        btnHeroe = new javax.swing.JPanel();
-        txtHeroe = new javax.swing.JLabel();
-        btnVillano = new javax.swing.JPanel();
-        txtVillano = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -127,122 +114,6 @@ public class SecretWarsGUI extends javax.swing.JFrame {
         );
 
         background.add(panelModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 600, 340));
-
-        panelBotones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        btnAgregar.setBackground(new java.awt.Color(255, 255, 255));
-        btnAgregar.setPreferredSize(new java.awt.Dimension(101, 20));
-        btnAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAgregarMouseClicked(evt);
-            }
-        });
-
-        txtAgregar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtAgregar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtAgregar.setText("Agregar");
-
-        javax.swing.GroupLayout btnAgregarLayout = new javax.swing.GroupLayout(btnAgregar);
-        btnAgregar.setLayout(btnAgregarLayout);
-        btnAgregarLayout.setHorizontalGroup(
-            btnAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-        );
-        btnAgregarLayout.setVerticalGroup(
-            btnAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-        );
-
-        btnListar.setBackground(new java.awt.Color(255, 255, 255));
-        btnListar.setPreferredSize(new java.awt.Dimension(101, 2));
-        btnListar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnListarMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnListarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnListarMouseExited(evt);
-            }
-        });
-
-        txtListar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtListar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtListar.setText("Listar");
-
-        javax.swing.GroupLayout btnListarLayout = new javax.swing.GroupLayout(btnListar);
-        btnListar.setLayout(btnListarLayout);
-        btnListarLayout.setHorizontalGroup(
-            btnListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtListar, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-        );
-        btnListarLayout.setVerticalGroup(
-            btnListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtListar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        btnModificar.setBackground(new java.awt.Color(255, 255, 255));
-        btnModificar.setPreferredSize(new java.awt.Dimension(100, 2));
-
-        txtModificar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtModificar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtModificar.setText("Modificar");
-
-        javax.swing.GroupLayout btnModificarLayout = new javax.swing.GroupLayout(btnModificar);
-        btnModificar.setLayout(btnModificarLayout);
-        btnModificarLayout.setHorizontalGroup(
-            btnModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtModificar, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-        );
-        btnModificarLayout.setVerticalGroup(
-            btnModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
-
-        txtEliminar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtEliminar.setText("Eliminar");
-
-        javax.swing.GroupLayout btnEliminarLayout = new javax.swing.GroupLayout(btnEliminar);
-        btnEliminar.setLayout(btnEliminarLayout);
-        btnEliminarLayout.setHorizontalGroup(
-            btnEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-        );
-        btnEliminarLayout.setVerticalGroup(
-            btnEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
-        panelBotones.setLayout(panelBotonesLayout);
-        panelBotonesLayout.setHorizontalGroup(
-            panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBotonesLayout.createSequentialGroup()
-                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        panelBotonesLayout.setVerticalGroup(
-            panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBotonesLayout.createSequentialGroup()
-                .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(btnListar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(btnModificar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(76, 76, 76))
-        );
-
-        background.add(panelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 600, 30));
 
         panelAgregar.setBackground(new java.awt.Color(204, 204, 204));
         panelAgregar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -321,10 +192,10 @@ public class SecretWarsGUI extends javax.swing.JFrame {
                 .addGroup(panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(tfAgilidadMental, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 98, Short.MAX_VALUE))
+                .addGap(0, 68, Short.MAX_VALUE))
         );
 
-        background.add(panelAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 600, 370));
+        background.add(panelAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 600, 340));
 
         panelListar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -351,104 +222,24 @@ public class SecretWarsGUI extends javax.swing.JFrame {
 
         background.add(panelListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 600, 340));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnEscuadron.setBackground(new java.awt.Color(255, 255, 255));
-        btnEscuadron.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEscuadronMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnEscuadronMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnEscuadronMouseExited(evt);
-            }
-        });
-
-        txtEscuadron.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtEscuadron.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtEscuadron.setText("Escuadron");
-
-        javax.swing.GroupLayout btnEscuadronLayout = new javax.swing.GroupLayout(btnEscuadron);
-        btnEscuadron.setLayout(btnEscuadronLayout);
-        btnEscuadronLayout.setHorizontalGroup(
-            btnEscuadronLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtEscuadron, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 500, Short.MAX_VALUE))
         );
-        btnEscuadronLayout.setVerticalGroup(
-            btnEscuadronLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtEscuadron, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-        );
-
-        btnHeroe.setBackground(new java.awt.Color(255, 255, 255));
-        btnHeroe.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnHeroeMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnHeroeMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnHeroeMouseExited(evt);
-            }
-        });
-
-        txtHeroe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtHeroe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtHeroe.setText("Heroe");
-
-        javax.swing.GroupLayout btnHeroeLayout = new javax.swing.GroupLayout(btnHeroe);
-        btnHeroe.setLayout(btnHeroeLayout);
-        btnHeroeLayout.setHorizontalGroup(
-            btnHeroeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtHeroe, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-        );
-        btnHeroeLayout.setVerticalGroup(
-            btnHeroeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtHeroe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        btnVillano.setBackground(new java.awt.Color(255, 255, 255));
-
-        txtVillano.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtVillano.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtVillano.setText("Villano");
-
-        javax.swing.GroupLayout btnVillanoLayout = new javax.swing.GroupLayout(btnVillano);
-        btnVillano.setLayout(btnVillanoLayout);
-        btnVillanoLayout.setHorizontalGroup(
-            btnVillanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtVillano, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-        );
-        btnVillanoLayout.setVerticalGroup(
-            btnVillanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtVillano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(btnEscuadron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnHeroe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnVillano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 284, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnEscuadron, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnHeroe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnVillano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        background.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 30));
+        background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -463,53 +254,6 @@ public class SecretWarsGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnEscuadronMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEscuadronMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEscuadronMouseClicked
-
-    private void btnEscuadronMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEscuadronMouseEntered
-        btnEscuadron.setBackground(Color.darkGray);
-        btnEscuadron.setForeground(Color.white);
-    }//GEN-LAST:event_btnEscuadronMouseEntered
-
-    private void btnEscuadronMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEscuadronMouseExited
-        btnEscuadron.setBackground(Color.white);
-        btnEscuadron.setForeground(Color.black);
-    }//GEN-LAST:event_btnEscuadronMouseExited
-
-    private void btnHeroeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHeroeMouseClicked
-        
-    }//GEN-LAST:event_btnHeroeMouseClicked
-
-    private void btnHeroeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHeroeMouseEntered
-        btnHeroe.setBackground(Color.darkGray);
-        btnHeroe.setForeground(Color.white);
-    }//GEN-LAST:event_btnHeroeMouseEntered
-
-    private void btnHeroeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHeroeMouseExited
-        btnHeroe.setBackground(Color.white);
-        btnHeroe.setForeground(Color.black);
-    }//GEN-LAST:event_btnHeroeMouseExited
-
-    private void btnListarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListarMouseClicked
-        panelListar.setVisible(true);
-    }//GEN-LAST:event_btnListarMouseClicked
-
-    private void btnListarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListarMouseEntered
-        
-    }//GEN-LAST:event_btnListarMouseEntered
-
-    private void btnListarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListarMouseExited
-        
-    }//GEN-LAST:event_btnListarMouseExited
-
-    private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
-        panelAgregar.setVisible(true);
-        panelListar.setVisible(false);
-        panelModificar.setVisible(false);
-        
-    }//GEN-LAST:event_btnAgregarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -548,13 +292,6 @@ public class SecretWarsGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
-    private javax.swing.JPanel btnAgregar;
-    private javax.swing.JPanel btnEliminar;
-    private javax.swing.JPanel btnEscuadron;
-    private javax.swing.JPanel btnHeroe;
-    private javax.swing.JPanel btnListar;
-    private javax.swing.JPanel btnModificar;
-    private javax.swing.JPanel btnVillano;
     private javax.swing.JFormattedTextField ftfAgilidad;
     private javax.swing.JFormattedTextField ftfFuerza;
     private javax.swing.JLabel jLabel1;
@@ -563,12 +300,12 @@ public class SecretWarsGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel panelAgregar;
-    private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelListar;
     private javax.swing.JPanel panelModificar;
     private javax.swing.JTextArea taListar;
@@ -578,15 +315,8 @@ public class SecretWarsGUI extends javax.swing.JFrame {
     private javax.swing.JTextField tfNombreEscuadron;
     private javax.swing.JTextField tfNombreHeroe;
     private javax.swing.JTextField tfPoder;
-    private javax.swing.JLabel txtAgregar;
     private javax.swing.JLabel txtDebilidad;
-    private javax.swing.JLabel txtEliminar;
-    private javax.swing.JLabel txtEscuadron;
-    private javax.swing.JLabel txtHeroe;
-    private javax.swing.JLabel txtListar;
-    private javax.swing.JLabel txtModificar;
     private javax.swing.JLabel txtNombreEscuadron;
     private javax.swing.JLabel txtNombreHeroe;
-    private javax.swing.JLabel txtVillano;
     // End of variables declaration//GEN-END:variables
 }
